@@ -2,7 +2,7 @@
     --negro: #000;
     --blanco: #fff; 
     
-    --verde: #4CAF50; 
+    --verde: #42a245; 
     --gris-claro: #f1f1f1; 
     --gris-oscuro: #a9a9a9;
 }
@@ -31,7 +31,7 @@ li,a{
 
 a{
     color:  var(--negro);
-    background-color: #4CAF50;
+    background-color: var(--verde);
 }
 
 .w-mx-500{
