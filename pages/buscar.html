@@ -24,6 +24,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/app.css" />
 
+    <!-- JavaScript -->
+    <script defer src="/assets/js/data/bd.js"></script>
+    <script defer src="/assets/js/pages/buscar.js"></script>
 </head>
 <body>
     
@@ -46,23 +49,35 @@
 
             <h2 class="text-center my-3">Buscar Canchas</h2>
 
-            <div class="d-flex gap-3 my-3">
+            <div class="d-flex flex-wrap gap-3 my-3">
                 <div class="">
-                    <label for="jugadores">Tipo de cancha:</label>
-                    <select name="jugadores" id="jugadores">
+                    <label for="tipo_cancha">Tipo de cancha:</label>
+                    <select name="tipo_cancha" id="tipo_cancha">
                         <option value="">--Tipo de cancha--</option>
+                        <option value="5">5 vs 5</option>
+                        <option value="7">7 vs 7</option>
+                        <option value="9">9 vs 9</option>
+                        <option value="11">11 vs 11</option>
                     </select>
                 </div>
                 <div class="">
                     <label for="ubicacion">Ubicacion:</label>
                     <select name="ubicacion" id="ubicacion">
                         <option value="">--Ubicacion--</option>
+                        <option value="florencio_varela">Florencio Varela</option>
+                        <option value="berazategui">Berazategui</option>
+                        <option value="bernal">Bernal</option>
+                        <option value="quilmes">Quilmes</option>
                     </select>
                 </div>
                 <div class="">
-                    <label for="precio">Precio (Hora):</label>
-                    <select name="precio" id="precio">
+                    <label for="precio_hora">Precio (Hora):</label>
+                    <select name="precio_hora" id="precio_hora">
                         <option value="">--Precio--</option>
+                        <option value="1500">$1500</option>
+                        <option value="3000">$3000</option>
+                        <option value="4000">$4000</option>
+                        <option value="6000">$6000</option>
                     </select>
                 </div>
                 <div class="">
@@ -77,10 +92,19 @@
                     <label for="valoracion">Valoracion:</label>
                     <select name="valoracion" id="valoracion">
                         <option value="">--Valoracion--</option>
+                        <option value="1">1 Estrella</option>
+                        <option value="2">2 Estrella</option>
+                        <option value="3">3 Estrella</option>
+                        <option value="4">4 Estrella</option>
+                        <option value="5">5 Estrella</option>
                     </select>
                 </div>
 
             </div>
+
+            <h2 class="text-center my-4">Resultados</h2>
+
+            <div id="resultados_busqueda"></div>
         </section>
         
         
