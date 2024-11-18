@@ -71,7 +71,7 @@ textarea{
 /* MAIN */
 
 .hero-img{
-    background-image: url(/src/img/Hero/heroImg.webp);
+    background-image: url(/assets/img/src/img/Hero/heroImg.webp);
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,7 +80,7 @@ textarea{
 }
 
 .hero-contacto{
-    background-image: url(/src/img/Hero/heroImg.webp);
+    background-image: url(/assets/img/src/img/Hero/contacto.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
