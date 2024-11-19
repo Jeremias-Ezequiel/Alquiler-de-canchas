@@ -78,12 +78,18 @@ function mostrarResultados(datos){
             ciudad = ciudad.replace(/\b\w/g, (letra) => letra.toUpperCase())
 
             // Creamos el mensaje
-            const mensaje = document.createElement('P')
+            const mensaje = document.createElement('A')
+            mensaje.href = '../../cancha-pages/cancha1.html'
+            mensaje.classList.add('borde-resultado','py-2','resultado-busqueda','d-block')
             let iluminado = (parseInt(iluminacion) ? 'Si' : 'No');
-            mensaje.innerText = `Cancha: ${cantidad} vs ${cantidad} - Ubicado en: ${ciudad} - Precio: ${precio} - Iluminacion: ${iluminado} - Valoracion de: ${valoracion} estrellas`
+            mensaje.innerText = `Cancha: ${cantidad} vs ${cantidad} - Ubicado en: ${ciudad} - Precio: ${precio} - Iluminación: ${iluminado} - Valoración de: ${valoracion} estrellas`
 
             resultado.appendChild(mensaje)
+            
         });
+        if(resultado.firstChild){
+            resultado.lastChild.classList.remove('borde-resultado')
+        }
 }
 
 function filtrarCanchas(){

@@ -244,3 +244,29 @@ textarea{
       transform: rotate(360deg);
     }
   }
+
+/* OPCIONES */
+
+.opciones{
+    align-items: center;
+}
+.opciones label{
+    width: 150px;
+}
+
+.opciones select{
+    align-self: center;
+}
+
+.borde-resultado{
+    border-bottom: 1px solid var(--gris-oscuro);
+    margin-bottom: 30px;
+}
+
+.resultado-busqueda{
+    background-color: var(--blanco);
+
+    &:hover{
+        background-color: var(--gris-claro);
+    }
+}
