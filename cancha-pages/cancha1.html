@@ -10,12 +10,10 @@
       type="image/x-icon"
     />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     
     <!-- Bootstrap -->
     <link
@@ -28,6 +26,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/app.css" />
 
+
+    <!-- JS -->
+    <script defer src="../assets/js/pages/reservas.js"></script>
+ 
   </head>
   <body>
     <header>
@@ -61,7 +63,7 @@
             alt="Cancha Azteca Futbol"
           />
         </div>
-        <div class="col-12 col-md-6 cancha-texto">
+        <div id="alquiler-cancha" class="col-12 col-md-6 cancha-texto">
           <div class="cancha-info">
             <p>
               ⚽Ubicacion:
@@ -73,44 +75,20 @@
             <b>🚫No se puede usar botines con tapones</b>
           </div>
 
-          <div class="cancha-horarios my-3">
-            <label for="horario">🗓️Selecciona un dia:</label>
-            <select id="horario" name="horario">
-              <option selected disabled>--Dia--</option>
-              <option value="08:00">Lunes</option>
-              <option value="09:00">Martes</option>
-              <option value="10:00">Miercoles</option>
-              <option value="11:00">Jueves</option>
-              <option value="12:00">Viernes</option>
-              <option value="12:00">Sabado</option>
-              <option value="12:00">Domingo</option>
+          <div class="cancha-dias my-3">
+            <label for="dia">🗓️Selecciona un dia:</label>
+            <select id="dia" name="dia">
+              <option value="" selected disabled>--Dia--</option>
             </select>
           </div>
           <div class="cancha-horarios my-3">
             <label for="horario">🕧Selecciona un horario:</label>
             <select id="horario" name="horario">
-              <option selected disabled>--Horario--</option>
-              <option value="08:00">08:00 AM</option>
-              <option value="09:00">09:00 AM</option>
-              <option value="10:00">10:00 AM</option>
-              <option value="11:00">11:00 AM</option>
-              <option value="12:00">12:00 PM</option>
-              <option value="13:00">01:00 PM</option>
-              <option value="14:00">02:00 PM</option>
-              <option value="15:00">03:00 PM</option>
-              <option value="16:00">04:00 PM</option>
-              <option value="17:00">05:00 PM</option>
-              <option value="18:00">06:00 PM</option>
-              <option value="19:00">07:00 PM</option>
-              <option value="19:00">08:00 PM</option>
-              <option value="19:00">09:00 PM</option>
-              <option value="19:00">10:00 PM</option>
-              <option value="19:00">11:00 PM</option>
-              <option value="19:00">12:00 PM</option>
+              <option value="" selected disabled>--Horario--</option>
             </select>
           </div>
 
-          <button class="btn btn-success my-3 mx-auto">Alquilar</button>
+          <button id="btn-alquilar" disabled class="btn btn-success my-3 mx-auto">Alquilar</button>
         </div>
       </section>
     </main>
