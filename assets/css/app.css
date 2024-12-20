@@ -140,6 +140,17 @@ textarea{
     gap: 10px;
 }
 
+.galeria-grid div{
+    height: 300px;
+    width: auto;
+}
+
+.galeria-grid a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
 .galeria-grid img{
     width: 100%;
     height: 100%;
@@ -319,3 +330,6 @@ textarea{
         transform: translateY(-25px);
     }
 }
+
+/* IMAGENES */
+
