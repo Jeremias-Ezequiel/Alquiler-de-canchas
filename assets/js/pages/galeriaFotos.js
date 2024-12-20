@@ -1,7 +1,7 @@
 const contenedorGaleria = document.querySelector('#galeria-fotos'); 
 
 function mostrarImagenes(){
-    const KEY = '47761668-9f598ac64dfa6a530da66d727'; 
+    const KEY = CONFIG.API_TOKEN; 
     const URL = `https://pixabay.com/api/?key=${KEY}&q=soccer`; 
 
     fetch(URL)
