@@ -65,12 +65,6 @@ function validar(event) {
   }
 }
 
-/**
- * Muestra un mensaje de error dentro del elemento padre
- * @param {String} mensaje - El mensaje de error a mostrar
- * @param {HTMLElement} elementoPadre - El contenedor donde se inserta el error
- */
-
 function mostrarError(mensaje, elementoPadre) {
   eliminarError(elementoPadre); // Evita duplicados antes de agregar un nuevo mensaje
 
@@ -80,10 +74,6 @@ function mostrarError(mensaje, elementoPadre) {
   elementoPadre.appendChild(error);
 }
 
-/**
- * Elimina un mensaje de error, si existe, del elemento padre
- * @param {HTMLElement} elementoPadre - El contenedor que puede tener un mensaje de error
- */
 function eliminarError(elementoPadre) {
   const error = elementoPadre.querySelector(".error");
   if (error) {
@@ -91,11 +81,6 @@ function eliminarError(elementoPadre) {
   }
 }
 
-/**
- * Valida el formato de un correo electrónico
- * @param {String} elemento - El valor del input a validar
- * @returns  {Boolean} - Devuelve 'true' si el correo es válido
- */
 function validarEmail(elemento) {
   const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
   const resultado = regex.test(elemento);
@@ -103,11 +88,6 @@ function validarEmail(elemento) {
   return resultado;
 }
 
-/**
- * Asigna los valores provenientes del formulario al objeto datos
- * @param {String} propiedad - Clave de nuestro objeto datos
- * @param {String} valor - Valor de nuestro objeto datos
- */
 function ingresarDatos(propiedad, valor) {
   datos[propiedad] = valor.toLowerCase();
 }
@@ -138,17 +118,10 @@ function mostrarMensajeExitoso() {
   btnSubmit.disabled = true;
 }
 
-/**
- * Reseteamos los datos de nuestro objeto data
- */
 function resetDatosFormulario() {
   Object.keys(datos).forEach((key) => (datos[key] = ""));
 }
 
-/**
- * Controlamos el envio del formulario
- * @param {Object} formData
- */
 function enviarFormulario(formData) {
   fetch("https://formspree.io/f/mldrqrzr", {
     method: "POST",
